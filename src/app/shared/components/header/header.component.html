@@ -1,0 +1,43 @@
+<div class="fixed z-50 w-full bg-white py-4 text-blackText">
+  <div class="items-center px-2 bg-white max-w-6xl m-auto">
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+      <div class="flex justify-between items-center">
+        <div class="flex">
+          <button (click)="toggleHeader()" class="text-yellow focus:outline-none lg:hidden mr-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+          <a href="#">
+            <img class="object-contain w-24 lg:w-32"
+              src="https://edustorage.oss-ap-southeast-5.aliyuncs.com/assets/edufund-logo.svg">
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <span class="mx-2">TKB90 = 100%</span>
+          <button class="text-yellow focus:outline-none lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd"
+                d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div [ngClass]="headerOpen ? 'block': 'hidden'" class="flex-col flex lg:flex-row px-4 lg:block">
+        <a href="#" class="px-4 py-1 text-sm hover:text-yellow">Beranda</a>
+        <a href="#" class="px-4 py-1 text-sm hover:text-yellow">Cara Kerja</a>
+        <a href="#" class="px-4 py-1 text-sm hover:text-yellow">Cara Bayar</a>
+        <a href="#" class="px-4 py-1 text-sm hover:text-yellow">Tentang kami</a>
+        <a href="#" class="px-4 py-1 text-sm hover:text-yellow">Hubungi kami</a>
+      </div>
+      <div class="hidden lg:flex items-center">
+        <span class="mx-2">TKB90 = 100%</span>
+        <a href="#" class="px-1 text-yellow">Masuk</a>
+        <button class="px-5 py-1 rounded-full bg-yellow text-white text-sm">Daftar</button>
+      </div>
+    </div>
+  </div>
+</div>

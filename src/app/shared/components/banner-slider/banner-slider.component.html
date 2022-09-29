@@ -1,0 +1,29 @@
+<div class="max-w-6xl m-auto relative pt-20">
+  <owl-carousel-o [options]="customOptions" (changed)="getPassedData($event)" #owlCar >
+    <ng-container *ngFor="let slide of banners;index as i">
+      <ng-template class="slide" carouselSlide [id]="slide.id">
+        <div class="p-3 flex items-center h-full">
+          <div class="w-full overflow-hidden bg-blue-300 rounded-2xl shadow-lg">
+            <img [src]="slide.src" [ngClass]=" activePosition === i? 'object-contain h-72': 'object-contain h-60'" [alt]="slide.id"
+              [title]="slide.title">
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+  <button class="rounded-full p-2 bg-white shadow-2xl nav-left text-yellow" (click)="owlCar.prev()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+      <path fill-rule="evenodd"
+        d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
+        clip-rule="evenodd" />
+    </svg>
+
+  </button>
+  <button class="rounded-full p-2 bg-white shadow-2xl nav-right text-yellow" (click)="owlCar.next()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+      <path fill-rule="evenodd"
+        d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+        clip-rule="evenodd" />
+    </svg>
+  </button>
+</div>

@@ -1,0 +1,13 @@
+<div class="max-w-cardDocument h-full my-10 md:m-3 rounded-2xl p-5 shadow-2xl">
+  <div class="relative flex-col">
+    <img class="m-auto -mt-20" [src]="cardData?.img" alt="" width="124" />
+    <div class="mb-6 text-center text-base font-bold">{{cardData?.title}}</div>
+    <div *ngFor="let documentList of cardData?.documentList" class="flex items-start py-3">
+      <img *ngIf="documentList.listType === listType.List;else subList" src="https://edufund.co.id/icon-check.956d764ed0fa006606f8.svg" alt="" />
+      <ng-template #subList>
+        <div class="mt-1 ml-6 h-2 w-2 rounded-full bg-yellow"></div>
+      </ng-template>
+      <span class="ml-2 text-sm">{{documentList.title}}</span>
+    </div>
+  </div>
+</div>
